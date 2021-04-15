@@ -1,4 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif:ital,wght@0,400;0,700;1,400;1,700&family=Open+Sans:ital,wght@0,400;0,700;1,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
 
 body {
-    background-color: aliceblue;
+    font: 400 16px/1.6 'Noto Serif', serif;
+    background-color: rgb(232, 232, 232);
+    color: rgb(28, 28, 28);
+    word-wrap: break-word;
+}
+
+
+main {
+    width: 100%;
+    padding: 50px 0;
+}
+
+header {
+    padding: 15px 0;
+}
+
+footer {
+    padding: 30px 0;
+}
+
+a {
+    color:rgb(155, 23, 0);
+    text-decoration: none;
+}
+
+a:hover {
+    color:rgba(155, 23, 0, 0.5);
+}
+
+.imgFluid {
+    max-width: 150%;
+    height: auto;
+}
+
+.textCenter {
+    text-align: center;
+}
+
+h2, .h2 {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    margin-bottom: 1.5rem;
+}
+
+footer {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 0.9rem;
+    position: relative;
+    text-align: center;
+    background-color: rgb(67, 58, 68);
+    color: rgb(255,255,255);
+}
+
+footer p {
+    font-size: 0.75rem;
+    margin-bottom: 0;
+}
+
+.footer ul {
+    list-style-type: none;
+    padding: 30px 0;
+    margin: 0;
+}
+
+.goTop {
+    position: absolute;
+    right: 15px;
+    bottom: 0px;
+    font-size: 2rem;
+}
+
+footer a {
+    color: rgb(255,255,255);
+}
+
+footer a:hover {
+    color: rgb(155, 23, 0);
+}
+
+@media (min-width: 768px) {
+    footer {
+        text-align: left;
+    }
+    .footer {
+        display:flex;
+        justify-content: space-between;
+    }
+    .footer ul li {
+        display: inline-block;
+    }
+    .footer ul li::after {
+        content: "•";
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+    .footer ul li:last-child::after {
+        content: "";
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+.containerFluid {
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+.container {
+    margin-right: auto;
+    margin-left: auto;
+    padding-right: 15px;
+    padding-left: 15px;
+    width: 100%;
+}
+
+@media (min-width: 576px) {
+    .container {
+        max-width: 540px;
+    }
+}
+
+.howTo {
+    width: 40%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.howTo p {
+    text-align: center;
+}
+
+@media (min-width: 768px) {
+    .container {
+        max-width: 720px;
+    }
+    .flexContainer {
+        display: flex;
+    }
+    .spaceBetween {
+        justify-content: space-between;
+    }
+    .howTo {
+        width: 15%;
+    }
+}
+
+@media (min-width: 992px) {
+    .container {
+        max-width: 960px;
+    }
+}
+
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1140px;
+    }
 }
