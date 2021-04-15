@@ -8,7 +8,6 @@
 
 body {
     font: 400 16px/1.6 'Noto Serif', serif;
-    background-color: rgb(232, 232, 232);
     color: rgb(28, 28, 28);
     word-wrap: break-word;
 }
@@ -30,6 +29,37 @@ footer {
 a {
     color:rgb(155, 23, 0);
     text-decoration: none;
+}
+
+header {
+    font-size: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+}
+
+.brand {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.brand h1 span:last-child {
+    font-style: italic;
+    font-weight: 400;
+    color: rgb(155, 23, 0);
+}
+
+.brand img {
+    margin-right: 15px;
+}
+
+.brand a {
+    color: rgb(2, 15, 20);
+}
+
+.brand, .navbar {
+    margin-bottom: 15px;
 }
 
 a:hover {
@@ -129,6 +159,47 @@ footer a:hover {
     }
 }
 
+nav.navbar {
+    font-family: 'Open Sans', sans-serif;
+    text-transform: uppercase;
+}
+
+nav.navbar ul {
+    list-style-type: none;
+}
+
+nav.navbar li {
+    text-align: center;
+    padding-bottom: 5px;
+}
+
+nav.navbar a {
+    font-weight: 700;
+    color: rgba(2,15,20,1);
+}
+
+nav.navbar a:hover {
+    color: rgba(2,15,20,0.5);
+}
+
+nav.navbar a.active {
+    font-style: italic;
+    font-weight: 700;
+}
+
+@media (min-width: 992px) {
+    nav.navbar ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    nav.navbar ul li {
+        padding-left: 15px;
+        padding-right: 15px;
+    }
+
+}
+
 .howTo {
     width: 40%;
     margin-left: auto;
@@ -163,5 +234,17 @@ footer a:hover {
 @media (min-width: 1200px) {
     .container {
         max-width: 1140px;
+    }
+}
+
+@media (min-width: 992px) {
+    header {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .brand, .navbar {
+        margin-bottom: 0;
     }
 }
