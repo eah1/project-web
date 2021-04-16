@@ -12,6 +12,31 @@ body {
     word-wrap: break-word;
 }
 
+h1, h2, h3, h4 {
+    font-weight: 700;
+}
+
+h1, .h1  {
+    font-size: 2rem;
+}
+
+h2, .h2 {
+    font-size: 1.5rem;
+    line-height: 1.5em;
+    margin-bottom: 1.5rem;
+}
+
+h3, .h3 {
+    font-size: 1.35rem;
+    line-height: 1em;
+    margin-bottom: 1rem;
+}
+
+h4, .h4 {
+    font-size: 1.15rem;
+    line-height: 1em;
+    margin-bottom: 1rem;
+}
 
 main {
     width: 100%;
@@ -200,6 +225,89 @@ nav.navbar a.active {
 
 }
 
+.menu ul {
+    text-transform: uppercase;
+    list-style-type: none;
+    font-size: 0.85rem;
+    font-family: 'Open Sans', sans-serif;
+    padding-bottom: 30px;
+}
+
+.menu a {
+    color: rgba(2,15,20,1);
+}
+
+.menu a:hover {
+    color: rgba(2,15,20,0.5);
+}
+
+ul.breadcrumb {
+    margin-bottom: 2rem;
+    list-style: none;
+    text-align: center;
+    font-family: 'Open Sans', sans-serif;
+}
+
+ul.breadcrumb li {
+    display: inline-block;
+}
+
+ul.breadcrumb li + li {
+    padding-left: 7px;
+}
+
+ul.breadcrumb li + li::before {
+    padding-right: 7px;
+    content: "/";
+}
+
+ul.breadcrumb li a {
+    color: rgba(2, 15, 20, 1);
+}
+
+ul.breadcrumb li a:hover {
+    color: rgba(2, 15, 20, 0.5);
+}
+
+ul.breadcrumb li.active  {
+    color: rgba(2, 15, 20, 0.5);
+}
+
+@media (min-width: 1200px) {
+    ul.breadcrumb {
+        text-align: left;
+    }
+}
+
+.home section+section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
+
+.data ul, .data li {
+    list-style-type: none;
+}
+.data h4 {
+    margin-top: 7px;
+    margin-bottom: 7px;
+    font-weight: 700;
+    border-bottom: 1px solid rgb(67,58,68);
+    font-size: inherit;
+    line-height: inherit;
+}
+
+.data .indent, .data li ul {
+    padding-left: 15px;
+}
+
+.data li>span {
+    font-weight: bold;
+}
+
+article h3, .data h3 {
+    margin-top: 2rem;
+}
+
 .howTo {
     width: 40%;
     margin-left: auto;
@@ -255,6 +363,10 @@ nav.navbar a.active {
     margin-bottom: 5px;
 }
 
+.intro {
+    padding-bottom: 30px;
+}
+
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
@@ -301,5 +413,26 @@ nav.navbar a.active {
     }
     .content ul li {
         width: 30%;
+    }
+    .intro p {
+        width: 80%;
+        margin-left: auto;
+        margin-right: auto;
+        line-height: 1.9em;
+    }
+    .bordered {
+        border-top: 4px dotted rgb(155, 23, 0);
+    }
+}
+
+@media (min-width: 1200px) {
+    .gridContainerDetalle {
+        display: grid;
+        grid-template-columns: 40% auto;
+        column-gap: 50px;
+    }
+    article {
+        text-align: justify;
+        hyphens: auto;
     }
 }
