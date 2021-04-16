@@ -210,6 +210,51 @@ nav.navbar a.active {
     text-align: center;
 }
 
+.content ul {
+    list-style-type: none;
+    padding-bottom: 30px;
+}
+
+.content ul li {
+    background-color: rgb(255,255,255);
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+    margin-bottom: 15px;
+    max-width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+}
+.content ul li a {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+.content ul li p {
+    margin: 7px;
+    font-family: "Open Sans", sans-serif;
+    font-weight: 700;
+}
+
+.content ul li img:hover {
+    opacity: 0.5;
+}
+.content h4 {
+    font-family: "Open Sans", sans-serif;
+    margin-top: 30px;
+}
+.content div:first-child h4 {
+    margin-top: 0;
+}
+.content h4::before {
+    content: "";
+    display: inline-block;
+    width: 5%;
+    border-top: 4px dotted rgb(155, 23, 0);
+    margin-right: 15px;
+    margin-bottom: 5px;
+}
+
 @media (min-width: 768px) {
     .container {
         max-width: 720px;
@@ -246,5 +291,15 @@ nav.navbar a.active {
     }
     .brand, .navbar {
         margin-bottom: 0;
+    }
+}
+
+@media (min-width: 768px) {
+    .content ul {
+        display: flex;
+        justify-content: space-between;
+    }
+    .content ul li {
+        width: 30%;
     }
 }
