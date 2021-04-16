@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/eah1/project-web#readme",
   "devDependencies": {
-    "autoprefixer": "^9.8.6",
+    "autoprefixer": "^9.0.0",
     "boilerplate-parcel": "^1.0.1",
     "parcel-bundler": "^1.12.5",
     "postcss": "^8.2.10",
