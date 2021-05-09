@@ -1,0 +1,98 @@
+@custom-selector :--general-fixes p, h1, h2, h3, ul, a;
+:root {
+    --main-padding: 120px;
+    --brown-background: #a7a4a4;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+:--general-fixes {
+    margin: 0;
+    color: inherit;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+a {
+    font-family: "Courier New", Courier, monospace;
+}
+
+a.active {
+    text-decoration: underline;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+body {
+    margin: 0;
+    font-family: Verdana,Geneva,sans-serif;
+}
+
+article {
+    padding: 50px var(--main-padding);
+    position: relative;
+    z-index: 1;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    font-size: 30px;
+    padding-top: 30px;
+    padding-bottom: 25px;
+    padding-left: var(--main-padding);
+    color: oldlace;
+    background-color: #0006;
+    width: 100%;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+}
+
+header > a {
+    margin-right: 50px;
+}
+
+header ul {
+    display: flex;
+    justify-content: space-between;
+}
+
+@media (max-width: 1199px) {
+    :root {
+        --main-padding: 30px;
+    }
+}
+
+@media (max-width: 599px) {
+    header {
+        padding-top: 10px;
+        padding-bottom: 10px;
+    }
+
+    header > a {
+        margin-right: 15px;
+    }
+
+    header ul {
+        width: 16pc;
+    }
+}
+
+@media (max-width: 399px) {
+    @media (max-width: 1199px) {
+        :root {
+            --main-padding: 10px;
+        }
+    }
+
+    header ul {
+        width: 180px;
+    }
+}
+
