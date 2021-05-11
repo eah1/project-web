@@ -2,6 +2,7 @@
 :root {
     --main-padding: 120px;
     --brown-background: #a7a4a4;
+    --clear-background: #ece8e4;
 }
 
 * {
@@ -30,7 +31,7 @@ a:hover {
 
 body {
     margin: 0;
-    font-family: Verdana,Geneva,sans-serif;
+    font-family: Verdana, Geneva, sans-serif;
 }
 
 article {
@@ -61,6 +62,47 @@ header > a {
 header ul {
     display: flex;
     justify-content: space-between;
+}
+
+.introduction {
+    text-align: center;
+    color: inherit;
+    margin-bottom: 40px;
+    position: relative;
+    z-index: 1;
+}
+
+.introduction h2 {
+    position: relative;
+    padding-bottom: 45px;
+    top: 50px
+}
+
+.introduction h2::after {
+    content: "";
+    display: block;
+    width: 60px;
+    height: 10px;
+    background-color: black;
+    position: absolute;
+    right: 0;
+    left: 0;
+    margin: 0 auto;
+    top: 36px;
+}
+
+.contend {
+    position: relative;
+    display: grid;
+    row-gap: 10px;
+    column-gap: 50px;
+    padding: 50px 40px 30px;
+    font-size: 16px;
+    z-index: 1
+}
+
+.activated {
+    color: darkgreen;
 }
 
 @media (max-width: 1199px) {
