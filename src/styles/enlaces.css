@@ -22,3 +22,25 @@ body {
 .contend {
     margin-top: 10px;
 }
+
+@media (max-width: 1199px) {
+    .enlaces {
+        min-width: 100%;
+        max-width: 220px;
+    }
+}
+
+@media (max-width: 991px) {
+    .enlaces {
+        grid-template-columns: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .enlaces {
+        height: 540px;
+        min-width: 100%;
+
+        margin-top: 200px;
+    }
+}
