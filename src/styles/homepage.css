@@ -1,0 +1,55 @@
+
+/*WELCOME*/
+article#welcome {
+    height: 100vh;
+    width: 100%;
+    background-image: url("../../resources/images/vegetariano-welcome.jpg");
+    background-repeat:no-repeat;
+    -webkit-background-size:cover;
+    -moz-background-size:cover;
+    -o-background-size:cover;
+    background-size:cover;
+    background-position:center;
+    position: relative;
+    color: white;
+}
+
+article#welcome #main-text {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    justify-content: center;
+    position: fixed;
+    z-index: 0;
+}
+
+article#welcome #main-text p {
+    font-size: 21px;
+    background-color: #0006;
+}
+
+article#welcome #main-text h1 {
+    font-size: 72px;
+    background-color: #0006;
+}
+
+/*Home Page*/
+article#home-page{
+    background-color: var(--brown-background);
+}
+
+@media (max-width: 991px) {
+    article#welcome {
+        background-position-x: -260px;
+    }
+}
+
+@media (max-width: 599px) {
+    article#welcome {
+        background-position-x: -510px;
+    }
+    article#welcome #main-text h1 {
+        font-size: 40px;
+    }
+}

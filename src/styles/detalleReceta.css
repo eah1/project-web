@@ -1,0 +1,122 @@
+body {
+    background-color: #ece8e4;
+}
+
+/*OBRA CONTAINER*/
+.detalleReceta {
+    margin-top: 110px;
+    display: grid;
+    grid-template-columns: 200px auto 180px;
+    grid-template-rows: auto 315px auto;
+    column-gap: 20px;
+    row-gap: 20px;
+}
+
+.detalleReceta h2 {
+    font-size: 38px;
+    text-align: center;
+    margin-bottom: 70px;
+    position: relative;
+    grid-column: 1 / 4;
+}
+
+.detalleReceta h2::after {
+    content: "";
+    display: block;
+    width: 200px;
+    height: 12px;
+    background-color: black;
+    position: relative;
+    top: 20px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+}
+
+.detalleReceta ul {
+    margin-bottom: 15px;
+    padding-right: 25px;
+    list-style: none;
+}
+
+.detalleReceta li::before {
+    content: "\2022";
+    padding-right: 10px;
+    color: red;
+}
+
+.detalleReceta div > p {
+    margin-bottom: 12px;
+    font-size: 24px;
+    font-family: "Courier New", Courier, monospace;
+    text-align: justify;
+}
+
+.detalleReceta div > p > span {
+    display: block;
+    font-weight: bold;
+    text-decoration: underline;
+    margin-bottom: 5px;
+}
+
+.ingredientes {
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    grid-column: 2;
+    grid-row: 2;
+    height: min-content;
+    width: 20%;
+}
+
+.ingredientes > p {
+    font-size: 22px;
+    text-decoration: underline;
+    margin: 0 0 12px;
+}
+
+.infoReceta {
+    position: relative;
+    background-color: white;
+    border-radius: 15px;
+    grid-column: 2;
+    grid-row: 2;
+    height: min-content;
+    width: 75%;
+    left: 25%;
+}
+
+@media (max-width: 991px) {
+    .detalleReceta {
+        grid-template-columns: 200px auto;
+    }
+
+    .infoReceta {
+        grid-column: 2 / 3;
+    }
+}
+
+@media (max-width: 599px) {
+    .detalleReceta {
+        grid-column: 1;
+    }
+
+    .detalleReceta h2 {
+        top: 150px;
+        grid-column: 1;
+    }
+
+    .infoReceta{
+        grid-column: 1;
+        top: 300px;
+        left: 10%;
+        width: 450px;
+    }
+
+    .ingredientes {
+        grid-column: 1;
+        top: 100px;
+        left: 10%;
+        width: 450px;
+    }
+}
